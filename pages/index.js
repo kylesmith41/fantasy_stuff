@@ -12,7 +12,7 @@ const getAuthorization = () => {
   return (
     axios
       .put(
-        `https://api.login.yahoo.com/oauth2/request_auth?client_id=${client_id}&redirect_uri=https%3A%2F%2Fblahffblah.herokuapp.com/&response_type=code&language=en-us`
+        `https://api.login.yahoo.com/oauth2/request_auth?client_id=${client_id}&redirect_uri=https%3A%2F%2Fblahffblah.herokuapp.com&response_type=code&language=en-us`
       , { headers: {"Access-Control-Allow-Origin": "*"}})
       .then(r => {
         console.log("should have a code", r);
