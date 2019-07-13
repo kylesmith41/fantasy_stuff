@@ -27,7 +27,7 @@ const getToken = (r) => {
   const {app_id, client_id, client_secret, code, redirect_uri} = config;
 
   return (
-    axios.post(`https://api.login.yahoo.com/oauth2/get_token?grant_type=authorization_code&redirect_uri=${redirect_uri}&code=${code}`)
+    axios.post(`https://api.login.yahoo.com/oauth2/get_token?grant_type=authorization_code&client_secret=${client_secret}&redirect_uri=${redirect_uri}&code=${code}`)
   )
 }
 
