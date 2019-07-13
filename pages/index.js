@@ -6,7 +6,7 @@ const config = {
   client_id:"dj0yJmk9MTZOd01CZGpHZzJRJmQ9WVdrOU1XRjRjWGxMTm1zbWNHbzlNQS0tJnM9Y29uc3VtZXJzZWNyZXQmc3Y9MCZ4PWEw",
   client_secret:"b71a20e0637029c71762e9b475dbeb86f387f34f",
   redirect_uri:"https%3A%2F%2Fblahffblah.herokuapp.com",
-  code:"k8unzne"
+  code:"5eq8qv8"
 }
 
 const getAuthorization = () => {
