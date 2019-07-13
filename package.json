@@ -7,7 +7,9 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "prettier": "prettier ./pages/*"
+    "prettier": "prettier ./pages/*",
+    "start": "next start -p $PORT",
+    "heroku-postbuild": "npm run build",
   },
   "keywords": [],
   "author": "",
