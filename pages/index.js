@@ -9,19 +9,19 @@ const config = {
   code:"5eq8qv8"
 }
 
-const getAuthorization = () => {
-  const {app_id, client_id, client_secret} = config;
-  return (
-    axios
-      .put(
-        `https://api.login.yahoo.com/oauth2/request_auth?client_id=${client_id}&redirect_uri=oob&response_type=code&language=en-us`
-      , { headers: {"Access-Control-Allow-Origin": "*"}})
-      .then(r => {
-        console.log("should have a code", r);
-        return r;
-      })
-  )
-}
+// const getAuthorization = () => {
+//   const {app_id, client_id, client_secret} = config;
+//   return (
+//     axios
+//       .put(
+//         `https://api.login.yahoo.com/oauth2/request_auth?client_id=${client_id}&redirect_uri=oob&response_type=code&language=en-us`
+//       , { headers: {"Access-Control-Allow-Origin": "*"}})
+//       .then(r => {
+//         console.log("should have a code", r);
+//         return r;
+//       })
+//   )
+// }
 
 const getToken = (r) => {
   const {app_id, client_id, client_secret, code, redirect_uri} = config;
@@ -32,7 +32,6 @@ const getToken = (r) => {
 }
 
 const makeRequest = () => {
-  getAuthorization();
   getToken().then(r => console.log("response", r));
 };
 
